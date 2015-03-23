@@ -1,0 +1,50 @@
+Each of the following 20 requirements will earn you 5 marks, for a total of 100 marks:
+
+1. The system must have membership-signup functionality including:
+	a. No duplicate usernames are permitted
+	b. Username must be an email address
+	c. Passwords are hashed when stored (i.e., the database does not contain the actual password)
+
+2. There must be a very simple, short, functional CAPTCHA for new users to pass.
+
+3. There must be a “reset password” function whereby users who forget their passwords can get an email with a new password in it. Your application must generate a new password and update the user’s database record with it.
+
+4. After registering, an email is sent to the user with a hyperlink in it. When the user clicks the link, the account becomes “active” and users can log in. Users cannot login to the system until this link has been clicked.
+
+5. If a user fails three times in a row to give the correct password for a given username, the account becomes “locked” and an email is sent to the user with a new password (as in step 3, above) and a hyperlink to click. Once the hyperlink is clicked, the user will be advised a break-in attempt was detected on their account, and they will be asked for their new password. Then they can log in again.
+
+6. The application must allow the user to store notes in a database and retrieve them, as the sample system does.
+
+7. The application must allow the user to store tbd in a database and retrieve them, as the sample system does.
+
+8. The application must allow the user to store hyperlinks in a database and retrieve them, as the sample system does. 
+
+9. The application must allow the user to store images in a database (not in the filesystem) and retrieve them, as the sample system does.
+
+10. Users can update notes by editing the textarea.
+
+11. Users can update tbd by editing the textarea.
+
+12. Users can update hyperinks by editing the textboxes.
+
+13. Users can only upload a maximum of four images per account.
+
+14. Users can only upload .jpg and .gif images.
+
+15. Users can delete images easily.
+
+16. If you do use the filesystem to store images temporarily (as the sample system does), ensure that when the user logs in and out, the user’s temporary folder is wiped clean. For example, when my users log in and view their data, I dump the images from the database to a user-specific folder. When the users log out, this folder is emptied. Furthermore, if someone attempts to view the files directly in this folder, they are denied. In other words, do not simply upload files to the filesystem and leave them available for everyone to see. Hide any folder contents and clean out any folder contents. The database is the repository for our users’ images.
+
+17.  There is a functioning logout function. 
+
+18. Anyone who is not logged in, and who attempts to view any page besides the login / register page(s) will be redirected to the register page. Use cookies to populate the login username.
+
+19. Use “secure sessions” to regenerate session ids and avoid relying on ONLY the session id as a client identifier.
+20. Automatically log out users who are inactive for more than 20 minutes.
+This assignment must be uploaded to a server accessible by your instructor, before the due date. Submit the following to sharein:
+One zip file named firstname_lastname.zip (your first and last names) containing all of your PHP scripts, CSS files, etc, your database-creation script, and a readme.txt file. 
+The readme.txt file must contain:
+	(a) the URL for testing, and
+	(b) a marking guide showing 
+	(i) your personal score for each of the 20 points above, and 
+	(ii) how you implemented each step. 
